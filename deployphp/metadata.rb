@@ -20,5 +20,3 @@ chef_version '>= 12.14' if respond_to?(:chef_version)
 # source_url 'https://github.com/<insert_org_here>/deployphp'
 
 depends "application", "~> 5.2.0"
-depends "application_php", "~> 2.0.0"
-depends "application_git", "~> 1.2.0"
