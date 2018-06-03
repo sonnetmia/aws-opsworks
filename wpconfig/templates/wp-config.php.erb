@@ -1,7 +1,7 @@
-app = search("aws_opsworks_app").first
 <?php 
 
-$d = #{app['environment']['testvalue']}
+$d = #{node[:aws_opsworks_agent]['apps'][:environment][:testvalue]}
+
 echo $d;
 ?>
 
