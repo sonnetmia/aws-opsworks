@@ -1,6 +1,7 @@
+app = search("aws_opsworks_app").first
 <?php 
 
-"<%= ENV["testvalue"] %>"
-
+$d = #{app['environment']['testvalue']}
+echo $d;
 ?>
 
