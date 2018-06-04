@@ -5,7 +5,9 @@ template "/srv/#{app['shortname']}/wp-config.php" do
 	group 'www-data'
 	mode '0640'
 	action :create
-	variables(database: '#{app['environment']['testvalue']}',
-			  db_host: '#{app['environment']['DB_HOST']}')
+    variables(
+        :database   => ('#{app['environment']['testvalue']}'),
+        :user       => ('#{app['environment']['testvalue']}')
+    )	
 end
 
