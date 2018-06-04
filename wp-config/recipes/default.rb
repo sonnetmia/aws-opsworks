@@ -14,3 +14,7 @@ data_bag("aws_opsworks_app").each do |data_bag_item|
   Chef::Log.info("********** The app's short name is '#{app['shortname']}' **********")
   Chef::Log.info("********** The app's URL is '#{app['app_source']['url']}' **********")
 end
+
+node['opsworks']['layers'].each do |layer, layerdata|
+  log "#{layerdata['name']} : #{layerdata['id']}"
+end
