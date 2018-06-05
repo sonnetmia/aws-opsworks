@@ -14,12 +14,11 @@ verifier:
 
 platforms:
   - name: ubuntu-16.04
-  - name: centos-7
 
 suites:
   - name: default
     run_list:
-      - recipe[aws-opsworks::default]
+      - recipe[wpconfig::default]
     verifier:
       inspec_tests:
         - test/integration/default
